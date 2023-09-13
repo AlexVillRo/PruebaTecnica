@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+
+<body class="container" style="border: 1px solid gray; margin-top: 10%;" >
+  <div class="form-signin w-100 div" >
+    <div class="contendor">
+      <img class="imagen" src="../../assets/user-shield-alt-1-svgrepo-com.svg" alt="">
+    </div>
+    <main class="form-signin w-100 m-auto">
+    <form [formGroup]="loginForm" (ngSubmit)="loginForm.valid && sendLogin()" >
+      <h1 class="h4 mb-3  m-auto fw-normal">Iniciar Sesión</h1>
+      <div class="form-floating">
+        <input formControlName="username" type="text" class="form-control" id="floatingInput" placeholder="">
+        <label for="floatingInput">Usuario</label>
+      </div>
+      <div class="form-floating">
+        <input formControlName="password" type="password" class="form-control" id="floatingPassword" placeholder="">
+        <label for="floatingPassword">Contraseña</label>
+      </div>
+      <button class="btn btn-primary w-50 py-2" type="submit">Iniciar</button>
+    </form>
+  </main>
+  </div>
+</body>
+
+

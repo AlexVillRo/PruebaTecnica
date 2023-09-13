@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<body style="margin-top: 150px;">
+  <div class="container" style="width: 700px;">
+  <div class="separador">
+    <div class="d-flex justify-content-end" style="border-bottom: 1px solid black;">
+      <div class="d-flex align-items-end">{{usuario}}</div>
+      <img src="../../assets/usercheck.svg" style=" width: 50px;">
+    </div>
+    <div class="d-flex justify-content-center">
+      <h4 style="margin: 15px;">Generacion de turnos</h4>
+    </div>
+    <div class="d-flex justify-content-start" style="margin-top: 10px;">
+      <select  [(ngModel)]="comercioSeleccionado"  (change)="seleccionarOpcion()" class="form-select" style="width: 150px; margin-right: 25px;" aria-label="Default select example">
+        <option hidden selected>Comercio</option>
+        <option *ngFor="let item of comercio">{{item.nombreComercio}}</option>
+      </select>
+      <select [(ngModel)]="servicioSeleccionado"class="form-select" style="width: 150px;" aria-label="Default select example">
+        <option hidden selected>Servicios</option>
+        <option *ngFor="let item of servicios">{{item.nombreServicio}}</option>
+      </select>
+    </div>
+    <div class="d-flex justify-content-start" style="margin-top: 10px;">
+
+      <mat-form-field style="margin-right: 20px; width: 150px;">
+        <mat-label>Fecha inicio</mat-label>
+        <input [(ngModel)]="fechaInicialSeleccionada" matInput [matDatepicker]="picker">
+        <mat-hint>MM/DD/YYYY</mat-hint>
+        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+
+
+      <mat-form-field style="margin-right: 20px; width: 150px;">
+        <mat-label>Fecha fin</mat-label>
+        <input [(ngModel)]="fechafinalSeleccionada"matInput [matDatepicker]="picker2">
+        <mat-hint>MM/DD/YYYY</mat-hint>
+        <mat-datepicker-toggle matIconSuffix [for]="picker2"></mat-datepicker-toggle>
+        <mat-datepicker #picker2></mat-datepicker>
+      </mat-form-field>
+
+      <button (click)="onSave()" mat-raised-button color="primary"  style="margin-left: 50px; padding-left: 50px; padding-right: 50px;">Generar</button>
+    </div>
+
+    <div class="d-flex justify-content-start" style="margin-top: 10px;">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Comercio</th>
+            <th scope="col">Servicio</th>
+            <th scope="col">Fecha Turno</th>
+            <th scope="col">Hora Inicio</th>
+            <th scope="col">Hora Fin</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of turnos">
+            <th scope="row">{{item.nombreComercio}}</th>
+            <td>{{item.nombreServicio}}</td>
+            <td>{{item.fechaTurno}}</td>
+            <td>{{item.horaInicio}}</td>
+            <td>{{item.horaFin}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+  </div>
+</body>
