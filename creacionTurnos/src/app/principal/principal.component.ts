@@ -26,7 +26,12 @@ export class PrincipalComponent {
   requestGuardarTurno:RequestGuardarTurno;
 
   ngOnInit(){
-
+    if(sessionStorage.getItem('ingresar')!='true'){
+      this.router.navigate(
+        [
+        '/login'
+      ]);
+    }
     this.consumo.obtenerTurnos().subscribe({
       next: (response) => {
        this.turnos=response;
@@ -73,38 +78,50 @@ export class PrincipalComponent {
   }
 
   onSave(){
-    Swal.fire({
-      title: '¡Cargando!',
-      html: 'Guardando, espere',
-      timerProgressBar: true,
-      didOpen: () => {
-        Swal.showLoading();
-      },
-    });
-    this.requestGuardarTurno={
-      nombreComercio:this.comercioSeleccionado,
-      nombreServicio:this.servicioSeleccionado,
-      fechaInicio:this.fechaInicialSeleccionada,
-      fechaFin:this.fechafinalSeleccionada
+
+
+    if(this.comercioSeleccionado == undefined || this.servicioSeleccionado == undefined || this.fechaInicialSeleccionada == undefined || this.fechafinalSeleccionada ==undefined){
+      Swal.fire(
+        'Oops! Something',
+        'Rellene todos los campos',
+        'error'
+      )
+    }else{
+      Swal.fire({
+        title: '¡Cargando!',
+        html: 'Guardando, espere',
+        timerProgressBar: true,
+        didOpen: () => {
+          Swal.showLoading();
+        },
+      });
+      this.requestGuardarTurno={
+        nombreComercio:this.comercioSeleccionado,
+        nombreServicio:this.servicioSeleccionado,
+        fechaInicio:this.fechaInicialSeleccionada,
+        fechaFin:this.fechafinalSeleccionada
+      }
+
+
+
+      this.consumo.guardarTurno(this.requestGuardarTurno).subscribe({
+        next: (response) => {
+          Swal.close();
+          Swal.fire(
+            'Buen trabajo!',
+            response.response,
+            'success'
+          )
+         },
+         error: (error) => {
+          Swal.close();
+           console.log(error);
+         }
+      })
+
+      console.log(this.requestGuardarTurno)
     }
-
-    this.consumo.guardarTurno(this.requestGuardarTurno).subscribe({
-      next: (response) => {
-        Swal.close();
-        Swal.fire(
-          'Buen trabajo!',
-          response.response,
-          'success'
-        )
-       },
-       error: (error) => {
-         console.log(error);
-       }
-    })
-
-    console.log(this.requestGuardarTurno)
-  }
-
+    }
 
 }
 

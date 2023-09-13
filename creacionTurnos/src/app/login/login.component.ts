@@ -31,6 +31,7 @@ export class LoginComponent {
         'error'
       )
     }else{
+      sessionStorage.setItem('ingresar', 'true')
       this.router.navigate(
         [
         '/principal',
