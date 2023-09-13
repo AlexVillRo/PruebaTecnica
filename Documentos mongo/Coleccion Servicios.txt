@@ -1,0 +1,27 @@
+Coleccion Servicios:
+
+{"_id":{"$oid":"6500d174756dea1d2f38a913"},"nombreComercio":"Car Center","nombreServicio":"Pintura","horaApertura":{"$numberLong":"8"},"horaCierre":{"$numberLong":"20"},"duracion":{"$numberLong":"1"},"_class":"com.reserva.turnos.dto.Servicios"}
+
+{"_id":{"$oid":"6500d1a3756dea1d2f38a914"},"nombreComercio":"Centro diseño","nombreServicio":"Diseño auto","horaApertura":{"$numberLong":"8"},"horaCierre":{"$numberLong":"20"},"duracion":{"$numberLong":"1"},"_class":"com.reserva.turnos.dto.Servicios"}
+
+{"_id":{"$oid":"6501fd0ffed7530425c98257"},"nombreComercio":"Car Center","nombreServicio":"Brillo","horaApertura":{"$numberInt":"8"},"horaCierre":{"$numberInt":"13"},"duracion":{"$numberInt":"2"},"_class":"com.reserva.turnos.dto.Servicios"}
+
+{"_id":{"$oid":"6501fd21fed7530425c98258"},"nombreComercio":"Car Center","nombreServicio":"Latoneria","horaApertura":{"$numberInt":"8"},"horaCierre":{"$numberInt":"15"},"duracion":{"$numberInt":"5"},"_class":"com.reserva.turnos.dto.Servicios"}
+
+{"_id":{"$oid":"6501fd4afed7530425c98259"},"nombreComercio":"Centro diseño","nombreServicio":"Diseño letras","horaApertura":{"$numberInt":"9"},"horaCierre":{"$numberInt":"16"},"duracion":{"$numberInt":"1"},"_class":"com.reserva.turnos.dto.Servicios"}
+
+{"_id":{"$oid":"6501fd51fed7530425c9825a"},"nombreComercio":"Centro diseño","nombreServicio":"Diseño llantas","horaApertura":{"$numberInt":"9"},"horaCierre":{"$numberInt":"16"},"duracion":{"$numberInt":"1"},"_class":"com.reserva.turnos.dto.Servicios"}
+
+{"_id":{"$oid":"6501fd5cfed7530425c9825b"},"nombreComercio":"Centro diseño","nombreServicio":"Diseño capo","horaApertura":{"$numberInt":"9"},"horaCierre":{"$numberInt":"18"},"duracion":{"$numberInt":"3"},"_class":"com.reserva.turnos.dto.Servicios"}
+
+{"_id":{"$oid":"6501fd6dfed7530425c9825c"},"nombreComercio":"Lavado Express","nombreServicio":"Remojo","horaApertura":{"$numberInt":"9"},"horaCierre":{"$numberInt":"18"},"duracion":{"$numberInt":"1"},"_class":"com.reserva.turnos.dto.Servicios"}
+
+{"_id":{"$oid":"6501fd73fed7530425c9825d"},"nombreComercio":"Lavado Express","nombreServicio":"Jabon","horaApertura":{"$numberInt":"9"},"horaCierre":{"$numberInt":"18"},"duracion":{"$numberInt":"1"},"_class":"com.reserva.turnos.dto.Servicios"}
+
+{"_id":{"$oid":"6501fd79fed7530425c9825e"},"nombreComercio":"Lavado Express","nombreServicio":"Secado","horaApertura":{"$numberInt":"9"},"horaCierre":{"$numberInt":"18"},"duracion":{"$numberInt":"2"},"_class":"com.reserva.turnos.dto.Servicios"}
+
+{"_id":{"$oid":"6501fd90fed7530425c9825f"},"nombreComercio":"Centro Atencion","nombreServicio":"Quejas y reclamos","horaApertura":{"$numberInt":"6"},"horaCierre":{"$numberInt":"15"},"duracion":{"$numberInt":"1"},"_class":"com.reserva.turnos.dto.Servicios"}
+
+{"_id":{"$oid":"6501fd95fed7530425c98260"},"nombreComercio":"Centro Atencion","nombreServicio":"Devoluciones","horaApertura":{"$numberInt":"6"},"horaCierre":{"$numberInt":"15"},"duracion":{"$numberInt":"1"},"_class":"com.reserva.turnos.dto.Servicios"}
+
+{"_id":{"$oid":"6501fd9cfed7530425c98261"},"nombreComercio":"Centro Atencion","nombreServicio":"Atencion al cliente","horaApertura":{"$numberInt":"6"},"horaCierre":{"$numberInt":"15"},"duracion":{"$numberInt":"1"},"_class":"com.reserva.turnos.dto.Servicios"}

@@ -1,0 +1,9 @@
+Collecion Comercios:
+
+{"_id":{"$oid":"6500bba0af4b41a5400ec5d0"},"nombreComercio":"Car Center","aforoMaximo":{"$numberLong":"15"}}
+
+{"_id":{"$oid":"6500bbe9af4b41a5400ec5d1"},"nombreComercio":"Centro diseño","aforoMaximo":{"$numberLong":"25"}}
+
+{"_id":{"$oid":"6500bc03af4b41a5400ec5d2"},"nombreComercio":"Lavado Express","aforoMaximo":{"$numberLong":"20"}}
+
+{"_id":{"$oid":"6500bc1eaf4b41a5400ec5d3"},"nombreComercio":"Centro Atencion","aforoMaximo":{"$numberLong":"50"}}
